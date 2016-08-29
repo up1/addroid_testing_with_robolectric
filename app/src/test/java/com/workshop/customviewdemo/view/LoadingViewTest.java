@@ -52,4 +52,11 @@ public class LoadingViewTest {
         assertThat(loadingTextView.getVisibility(), equalTo(View.VISIBLE));
     }
 
+    @Test
+    public void testStopLoadingAndSEtTextShouldSetTheTextOnTheTextView() {
+        loadingView.stopLoadingAndSetText(R.string.unit_tests_ftw);
+
+        assertThat((String) loadingTextView.getText(), equalTo("Unit Tests FTW!!!"));
+    }
+
 }
